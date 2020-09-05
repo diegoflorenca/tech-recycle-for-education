@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+// Import logo component
+import Header from './components/Header';
 
 function App() {
+  const P = styled.p`
+    width: 290px;
+  `;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header title="Welcome!" />
+      <P>
+        Each course contains video lectures, tasks, and text materials. All
+        courses viewed by you are displayed in your personal account
+      </P>
     </div>
   );
 }
