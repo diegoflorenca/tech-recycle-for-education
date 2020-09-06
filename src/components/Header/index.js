@@ -5,6 +5,7 @@ function header(props) {
   const Header = styled.header`
     text-align: right;
     margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
   `;
 
   const Logo = styled.h1`
