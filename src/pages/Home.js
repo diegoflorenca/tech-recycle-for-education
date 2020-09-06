@@ -1,18 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 // Import components
 import Header from '../components/Header';
-import Button from '../components/Button';
-import Select from '../components/Select';
-
-const Main = styled.main`
-  height: calc(100vh - 191px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`;
+import Link from '../components/Link';
+import Main from '../components/Main';
 
 const P = styled.p`
   width: 290px;
@@ -28,11 +20,13 @@ function Home() {
           Each course contains video lectures, tasks, and text materials. All
           courses viewed by you are displayed in your personal account
         </P>
-        <Link to="/sobre">Sobre</Link>
-        <Select placeHolder="Teste" />
         <div>
-          <Button solid>Make the difference!</Button>
-          <Button>Login</Button>
+          <Link to="/map" className="solid">
+            Make the difference!
+          </Link>
+          <Link to="/login" className="outline">
+            Login
+          </Link>
         </div>
       </Main>
     </div>

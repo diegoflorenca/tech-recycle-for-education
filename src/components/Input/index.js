@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Input = styled.input`
-  height: 56px;
+  display: block;
+  height: 43px;
+  width: 100%;
   font-size: 1em;
   color: var(--darkgray);
   border: none;

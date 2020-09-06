@@ -1,10 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Header = styled.header`
-  text-align: right;
+  display: flex;
   margin-bottom: 20px;
+  flex-direction: column;
   font-family: 'Montserrat', sans-serif;
+
+  a {
+    width: 209px;
+    display: block;
+    text-align: right;
+    align-self: flex-end;
+    text-decoration: none;
+  }
 `;
 
 const Logo = styled.h1`
@@ -22,13 +32,17 @@ const Title = styled.h2`
   margin-top: 2em;
   text-align: left;
   color: var(--primary);
+  align-self: flex-start;
 `;
 
 function header(props) {
   return (
     <Header>
-      <Logo>TechRecycle</Logo>
-      <Undertext>for education</Undertext>
+      <Link to="/">
+        <Logo>TechRecycle</Logo>
+        <Undertext>for education</Undertext>
+      </Link>
+
       <Title>{props.title}</Title>
     </Header>
   );

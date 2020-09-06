@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 // Import components
 import Header from '../components/Header';
-import Button from '../components/Button';
+import Select from '../components/Select';
 
 const Main = styled.main`
   height: calc(100vh - 191px);
@@ -13,19 +12,16 @@ const Main = styled.main`
   justify-content: space-around;
 `;
 
-function App() {
+function Map() {
   return (
-    <div className="App">
-      <Header title="Sobre" />
+    <div>
+      <Header title="Donation points near you." />
       <Main>
-        <Link to="/">Home</Link>
-        <div>
-          <Button solid>Make the difference!</Button>
-          <Button>Login</Button>
-        </div>
+        <p>Leaflet map api</p>
+        <Select placeHolder="Filter by items..." />
       </Main>
     </div>
   );
 }
 
-export default App;
+export default Map;
